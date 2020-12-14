@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change pass</title>
+</head>
+<body>
+    <form action="" method="POST" novalidate>
+        {% csrf_token %}
+        {% for f in fm %}
+        {{f.label_tag}}
+        {{f}}
+        {{f.errors|striptags}}
+        <br><br>
+        {% endfor %}
+        <input type="submit" value="SAVE" name="" id="">
+    </form>
+    
+</body>
+</html>

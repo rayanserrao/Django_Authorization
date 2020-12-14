@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+</head>
+<body>
+    <form action="" method="POST" >
+        {% csrf_token %}
+        {% for f in fm %}
+        {{f.label_tag}} {{f}} {{f.errors}}
+        <br><br>
+
+        {% endfor %}
+        <input type="submit" value="LOGIN" name="" id="">
+    </form>
+    <a href="/signup">signup</a>
+    
+</body>
+</html>

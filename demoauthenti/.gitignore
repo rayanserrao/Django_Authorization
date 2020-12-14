@@ -1,0 +1,5 @@
+.env
+db.sqlite3
+/signup/__pycache__/
+/signup/migrations/
+/demoauthenti/__pycache__/

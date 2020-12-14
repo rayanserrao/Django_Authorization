@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    welcome to profile
+    {{name}} aapka swagath hei
+    <button><a href="/logout/">Logout</a></button>
+    <button><a href="/passchange/">Change Password</a></button>
+    <button><a href="/passchange1/">Change Password 1</a></button>
+
+    <br>
+    {% if user.is_authenticated %}
+    {{request.user}}
+    {% else %}
+    <button><a href="/login/">Login</a></button>
+    {% endif %}
+    <form action="" method="POST" novalidate>
+        {% csrf_token %}
+        {% for f in fm %}
+        {{f.label_tag}}
+        {{f}}
+        {{f.errors|striptags}}
+        <br><br>
+        {% endfor %}
+        <input type="submit" value="SAVE" name="" id="">
+    </form>
+    
+</body>
+</html>
