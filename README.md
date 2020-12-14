@@ -1,3 +1,3 @@
 # Django_Authorization
 
-Simple example of how Djnago Authorization works.
+Simple example of how Django Authorization works.
